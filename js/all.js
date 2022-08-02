@@ -1,13 +1,3 @@
-function safariHacks() {
-  let windowsVH = window.innerHeight / 100;
-  document.querySelector('#background').style.setProperty('--vh', windowsVH + 'px');
-  window.addEventListener('resize', function() {
-      document.querySelector('#background').style.setProperty('--vh', windowsVH + 'px');
-  });
-}
-
-safariHacks();
-
 $("#random").click(function(){
   $(this).toggleClass("clicked");
 });
@@ -132,3 +122,10 @@ function changeProgressBar() {
 }
 
 progressBar.addEventListener("click", changeProgressBar);
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+safariHacks();
