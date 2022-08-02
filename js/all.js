@@ -1,3 +1,13 @@
+function safariHacks() {
+  let windowsVH = window.innerHeight / 100;
+  document.querySelector('#background').style.setProperty('--vh', windowsVH + 'px');
+  window.addEventListener('resize', function() {
+      document.querySelector('#background').style.setProperty('--vh', windowsVH + 'px');
+  });
+}
+
+safariHacks();
+
 $("#random").click(function(){
   $(this).toggleClass("clicked");
 });

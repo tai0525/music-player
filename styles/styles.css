@@ -1,6 +1,7 @@
 #background {
     object-fit: cover;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
     margin: auto;
     filter: blur(5px); /*高斯模糊*/
